@@ -1,0 +1,11 @@
+name: TDeathMessages
+version: "1.0.0"
+authors:
+  - Element4521
+main: xyz.galaxyy.tdeathmessages.TDeathMessages
+description: Customizable death messages
+api-version: "1.20"
+dependencies:
+  - name: MiniPlaceholders
+    required: false
+    bootstrap: false
