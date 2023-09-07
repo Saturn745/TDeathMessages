@@ -5,7 +5,7 @@
 - Customize death messages using MiniMessage and MiniPlaceholders.
 - Lightweight and efficient, ensuring minimal impact on server performance.
 - Create engaging and dynamic death messages for a more immersive gaming experience.
-- No extra necessary features!
+- No extra unnecessary features!
 
 ## Default Configuration
 
