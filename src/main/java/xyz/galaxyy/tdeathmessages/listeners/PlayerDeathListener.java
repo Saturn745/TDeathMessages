@@ -29,12 +29,13 @@ public class PlayerDeathListener implements Listener {
         Player player = event.getPlayer();
         Player killer = event.getPlayer().getKiller();
 
-
-        TagResolver resolver;
-        if (killer == null) {
-            resolver = MiniPlaceholders.getAudienceGlobalPlaceholders(player);
-        } else {
-            resolver = MiniPlaceholders.getRelationalGlobalPlaceholders(player, killer);
+        TagResolver resolver = null;
+        if (this.plugin.miniPlaceholders) {
+            if (killer == null) {
+                resolver = MiniPlaceholders.getAudienceGlobalPlaceholders(player);
+            } else {
+                resolver = MiniPlaceholders.getRelationalGlobalPlaceholders(player, killer);
+            }
         }
 
         List<String> messages = plugin.getConfig().getStringList("messages."+player.getLastDamageCause().getCause().toString().toLowerCase());
@@ -53,7 +54,7 @@ public class PlayerDeathListener implements Listener {
                                         .append(killer.getEquipment().getItemInMainHand().getItemMeta().hasDisplayName() ? Objects.requireNonNull(killer.getEquipment().getItemInMainHand().getItemMeta().displayName()) : Component.translatable(killer.getEquipment().getItemInMainHand()))
                                         .hoverEvent(killer.getEquipment().getItemInMainHand())
                                 : Component.text("fists")),
-                resolver)
+                resolver == null ? TagResolver.empty() : resolver)
         );
 
     }
