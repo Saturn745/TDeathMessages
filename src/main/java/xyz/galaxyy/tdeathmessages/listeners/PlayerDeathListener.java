@@ -26,8 +26,8 @@ public record PlayerDeathListener(TDeathMessages plugin) implements Listener {
         Player player = event.getPlayer();
         Player killer = event.getPlayer().getKiller();
 
-        TagResolver resolver = MiniPlaceholders.audiencePlaceholders();
-
+        TagResolver audiencePlaceholders = MiniPlaceholders.audiencePlaceholders();
+        TagResolver globalPlaceholders = MiniPlaceholders.globalPlaceholders();
         List<String> messages = plugin.getConfig().getStringList("messages." + player.getLastDamageCause().getCause().toString().toLowerCase());
         if (messages.isEmpty()) {
             event.deathMessage(
@@ -50,7 +50,7 @@ public record PlayerDeathListener(TDeathMessages plugin) implements Listener {
                                         .append(killer.getEquipment().getItemInMainHand().getItemMeta().hasDisplayName() ? Objects.requireNonNull(killer.getEquipment().getItemInMainHand().getItemMeta().displayName()) : Component.translatable(killer.getEquipment().getItemInMainHand()))
                                         .hoverEvent(killer.getEquipment().getItemInMainHand())
                                 : Component.text("fists")),
-                resolver == null ? TagResolver.empty() : resolver)
+                audiencePlaceholders, globalPlaceholders)
         );
 
     }
