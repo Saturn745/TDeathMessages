@@ -14,8 +14,8 @@ repositories {
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
-    compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
-    compileOnly("io.github.miniplaceholders:miniplaceholders-api:2.2.1")
+    compileOnly("io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT")
+    compileOnly("io.github.miniplaceholders:miniplaceholders-api:3.0.1")
 }
 
 modrinth {
@@ -24,7 +24,7 @@ modrinth {
     versionNumber.set(version.toString()) // You don't need to set this manually. Will fail if Modrinth has this version already
     versionType.set("beta") // This is the default -- can also be `beta` or `alpha`
     uploadFile.set(tasks.jar)
-    gameVersions.addAll("1.20.1")
+    gameVersions.addAll("1.21.1")
     loaders.addAll("paper", "purpur")
     dependencies {
         optional.project("miniplaceholders")
