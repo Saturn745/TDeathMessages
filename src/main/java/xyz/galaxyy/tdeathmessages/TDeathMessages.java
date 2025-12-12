@@ -9,14 +9,14 @@ import java.util.List;
 import java.util.Objects;
 
 public final class TDeathMessages extends JavaPlugin {
-    public boolean miniPlaceholders = false;
     @Override
     public void onEnable() {
         this.saveDefaultConfig();
         this.checkGamerule();
         this.getServer().getPluginManager().registerEvents(new PlayerDeathListener(this), this);
-        if (this.getServer().getPluginManager().getPlugin("MiniPlaceholders") != null && Objects.requireNonNull(this.getServer().getPluginManager().getPlugin("MiniPlaceholders")).isEnabled()) {
-            this.miniPlaceholders = true;
+        if (this.getServer().getPluginManager().getPlugin("MiniPlaceholders") == null) {
+            this.getLogger().warning("MiniPlaceholders is not installed! MiniPlaceholders is required for this plugin to work properly.");
+            this.getServer().getPluginManager().disablePlugin(this);
         }
     }
 

@@ -1,14 +1,21 @@
 messages:
   contact:
-    - "<red>☠ <player> was pricked to death <expr_if:<killer>:Unknown: :by <killer>>"
+    - "<red>☠ <player> was pricked to death<expr_if:<killer>:Unknown::by <killer>>"
+    - "<red>☠ <player> touched something they shouldn't have"
   entity_attack:
     - "<red>☠ <player> was attacked by <killer> using <weapon>"
+    - "<red>☠ <player> lost a fight with <killer>"
   entity_sweep_attack:
-    - "<red>☠ <player> was attacked <expr_if:<killer>:Unknown: :by <killer>>"
+    - "<red>☠ <player> was attacked<expr_if:<killer>:Unknown:: by <killer>>"
+    - "<red>☠ <player> was swept away<expr_if:<killer>:Unknown:: by <killer>>"
   projectile:
-    - "<red>☠ <player> was shot <expr_if:<killer>:Unknown: :by <killer>>"
+    - "<red>☠ <player> was shot<expr_if:<killer>:Unknown:: by <killer>>"
+    - "<red>☠ <player> caught an arrow with their face<expr_if:<killer>:Unknown:: from <killer>>"
+    - "<red>☠ <player> didn't dodge in time<expr_if:<killer>:Unknown:: against <killer>>"
   suffocation:
     - "<red>☠ <player> suffocated"
+    - "<red>☠ <player> ran out of air"
+    - "<red>☠ <player> got stuck in a wall"
   fall:
     - "<red>☠ <player> fell to their death from a great height"
     - "<red>☠ <player> didn't stick the landing"
@@ -16,61 +23,91 @@ messages:
     - "<red>☠ <player> left the plane without a parachute"
     - "<red>☠ <player> left their parachute at home"
     - "<red>☠ <player> thought they could fly"
+    - "<red>☠ <player> learned about gravity the hard way"
+    - "<red>☠ <player> hit the ground too hard"
   fire:
-    - "<red>☠ <player> was burned to death <expr_if:<killer>:Unknown: :by <killer>>"
-    - "<red>☠ <player> went up in flames <expr_if:<killer>:Unknown: :from <killer>>"
+    - "<red>☠ <player> was burned to death<expr_if:<killer>:Unknown:: by <killer>>"
+    - "<red>☠ <player> went up in flames<expr_if:<killer>:Unknown:: from <killer>>"
+    - "<red>☠ <player> forgot stop, drop, and roll"
   fire_tick:
     - "<red>☠ <player> succumbed to burns caused by fire"
     - "<red>☠ <player> burned to death"
+    - "<red>☠ <player> was consumed by flames"
   melting:
     - "<red>☠ <player> melted away"
+    - "<red>☠ <player> couldn't take the heat"
   lava:
-    - "<red>☠ <player> was engulfed in lava <expr_if:<killer>:Unknown: :while trying to escape from <killer>>"
-    - "<red>☠ <player> tried to swim in lava <expr_if:<killer>:Unknown: :while trying to escape from <killer>>"
+    - "<red>☠ <player> was engulfed in lava<expr_if:<killer>:Unknown:: while trying to escape from <killer>>"
+    - "<red>☠ <player> tried to swim in lava<expr_if:<killer>:Unknown:: while trying to escape from <killer>>"
+    - "<red>☠ <player> discovered lava is not a hot tub<expr_if:<killer>:Unknown:: thanks to <killer>>"
+    - "<red>☠ <player> took a lava bath"
   drowning:
     - "<red>☠ <player> drowned"
     - "<red>☠ <player> forgot to breathe"
     - "<red>☠ <player> forgot to come up for air"
     - "<red>☠ <player> forgot to hold their breath"
+    - "<red>☠ <player> slept with the fishes"
   block_explosion:
-    - "<red>☠ <player> was caught in a explosion <expr_if:<killer>: :caused by <killer>>"
+    - "<red>☠ <player> was caught in an explosion<expr_if:<killer>:Unknown:: caused by <killer>>"
+    - "<red>☠ <player> was blown to bits<expr_if:<killer>:Unknown:: by <killer>>"
   entity_explosion:
-    - "<red>☠ <player> was caught in a explosion <expr_if:<killer>: :caused by <killer>>"
+    - "<red>☠ <player> was caught in an explosion<expr_if:<killer>:Unknown:: caused by <killer>>"
+    - "<red>☠ <player> went out with a bang<expr_if:<killer>:Unknown:: thanks to <killer>>"
   void:
-    - "<red>☠ <player> fell into the void <expr_if:<killer>:Unknown: :while trying to escape from <killer>>"
-    - "<red>☠ <player> fell out of the world <expr_if:<killer>:Unknown: :while trying to escape from <killer>>"
+    - "<red>☠ <player> fell into the void<expr_if:<killer>:Unknown:: while trying to escape from <killer>>"
+    - "<red>☠ <player> fell out of the world<expr_if:<killer>:Unknown:: while trying to escape from <killer>>"
+    - "<red>☠ <player> was erased from existence"
   lightning:
     - "<red>☠ <player> was struck by lightning"
+    - "<red>☠ <player> was smited from above"
+    - "<red>☠ <player> became a lightning rod"
   suicide:
     - "<red>☠ <player> committed suicide"
+    - "<red>☠ <player> gave up"
   starvation:
     - "<red>☠ <player> starved to death"
+    - "<red>☠ <player> forgot to eat"
+    - "<red>☠ <player> should have packed a lunch"
   poison:
     - "<red>☠ <player> succumbed to poison"
+    - "<red>☠ <player> was poisoned"
   magic:
     - "<red>☠ <player> was killed by a magical force"
+    - "<red>☠ <player> was cursed"
   wither:
     - "<red>☠ <player> withered away"
+    - "<red>☠ <player> was corrupted by darkness"
   falling_block:
     - "<red>☠ <player> was crushed by a falling block"
+    - "<red>☠ <player> should have looked up"
   thorns:
-    - "<red>☠ <player> was pricked to death <expr_if:<killer>:Unknown: :by <killer>'s thorns>"
+    - "<red>☠ <player> was pricked to death<expr_if:<killer>:Unknown:: by <killer>'s thorns>"
+    - "<red>☠ <player> hugged a cactus<expr_if:<killer>:Unknown:: named <killer>>"
   dragon_breath:
     - "<red>☠ <player> was caught in a dragon's breath attack"
+    - "<red>☠ <player> inhaled dragon breath"
   custom:
-    - "<red>☠ <player> met an unusual demise<expr_if:<killer>:Unknown: : by <killer>>"
+    - "<red>☠ <player> met an unusual demise<expr_if:<killer>:Unknown:: by <killer>>"
+    - "<red>☠ <player> died mysteriously<expr_if:<killer>:Unknown:: near <killer>>"
   fly_into_wall:
     - "<red>☠ <player> flew into a wall"
     - "<red>☠ <player> thought they were a ghost"
+    - "<red>☠ <player> forgot to brake"
   hot_floor:
     - "<red>☠ <player> couldn't handle the heat"
+    - "<red>☠ <player> danced on hot coals"
   cramming:
     - "<red>☠ <player> was crushed by too many entities"
+    - "<red>☠ <player> was squished"
   dryout:
     - "<red>☠ <player> dried out"
+    - "<red>☠ <player> needed water"
   freeze:
     - "<red>☠ <player> froze to death"
+    - "<red>☠ <player> became an ice sculpture"
+    - "<red>☠ <player> forgot their coat"
   sonic_boom:
     - "<red>☠ <player> was shattered by a sonic boom"
+    - "<red>☠ <player> heard their last sound"
   unknown:
     - "<red>☠ <original_message>"

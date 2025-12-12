@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "xyz.galaxyy.tdeathmessages"
-version = "1.1-SNAPSHOT"
+version = "2.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -24,10 +24,21 @@ modrinth {
     versionNumber.set(version.toString()) // You don't need to set this manually. Will fail if Modrinth has this version already
     versionType.set("beta") // This is the default -- can also be `beta` or `alpha`
     uploadFile.set(tasks.jar)
-    gameVersions.addAll("1.21.1")
+    gameVersions.addAll(
+        "1.21.1",
+        "1.21.2",
+        "1.21.3",
+        "1.21.4",
+        "1.21.5",
+        "1.21.6",
+        "1.21.7",
+        "1.21.8",
+        "1.21.10",
+        "1.21.11"
+    )
     loaders.addAll("paper", "purpur")
     dependencies {
-        optional.project("miniplaceholders")
+        required.project("miniplaceholders")
     }
 }
 
